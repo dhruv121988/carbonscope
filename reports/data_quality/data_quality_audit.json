@@ -1,7 +1,7 @@
 {
   "audit_title": "CarbonScope 2.0 Official Data Quality & Integrity Audit",
   "source_authority": "European Commission Joint Research Centre (EDGAR 2026)",
-  "audit_date": "2026-11-13 10:34:49 UTC",
+  "audit_date": "2026-11-15 17:17:37 UTC",
   "datasets": {
     "master_panel": {
       "dataset_name": "Master Emissions Panel",
@@ -207,6 +207,36 @@
     }
   },
   "cleaning_transformations": [
+    {
+      "step": "Drop Blank Rows",
+      "details": "Removed fully null separator rows",
+      "records_affected": 2
+    },
+    {
+      "step": "Melt Totals Panel",
+      "details": "Converted wide matrix (212 countries x 56 years) into long format",
+      "records_affected": 11872
+    },
+    {
+      "step": "Melt Sectoral Panel",
+      "details": "Processed 212 entities across 8 sectors",
+      "records_affected": 271936
+    },
+    {
+      "step": "Drop Blank Rows",
+      "details": "Removed fully null separator rows",
+      "records_affected": 2
+    },
+    {
+      "step": "Melt Totals Panel",
+      "details": "Converted wide matrix (212 countries x 56 years) into long format",
+      "records_affected": 11872
+    },
+    {
+      "step": "Assemble Master Panel",
+      "details": "Merged totals, fossil CO2, per-capita, and per-GDP indicators into unified 11,872 record panel",
+      "records_affected": 11872
+    },
     {
       "step": "Drop Blank Rows",
       "details": "Removed fully null separator rows",

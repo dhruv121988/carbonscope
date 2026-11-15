@@ -44,43 +44,43 @@ apply_theme()
 
 
 MODULE_SUBITEMS = {
-    "1. Overview Dashboard": [
+    "🌍 1. Overview Dashboard": [
         "Global GHG Trajectory",
         "India Decarbonization Profile",
         "IPCC Sector Distribution",
         "Top Sovereign Emitters"
     ],
-    "2. Data Intelligence": [
+    "🗄️ 2. Data Intelligence": [
         "Cryptographic Provenance (SHA-256)",
         "Automated Quality Audit (99.88%)",
         "Decadal Completeness Matrix",
         "Official EDGAR Ingestion"
     ],
-    "3. Emission Explorer": [
+    "🗺️ 3. Emission Explorer": [
         "Multi-Country Trajectories",
         "Sectoral Evolution & Areas",
         "Planetary Choropleth Density Map",
         "Macroeconomic Intensity (GDP/Capita)"
     ],
-    "4. ML Laboratory": [
+    "🧪 4. ML Laboratory": [
         "Chronological Holdout Validation",
         "Multi-Model Regression Benchmark",
         "Actual vs Predicted Fit Curve",
         "10-Year Recursive Forecast (2026–2035)"
     ],
-    "5. Anomaly Radar": [
+    "📡 5. Anomaly Radar": [
         "Statistical Z-Score Detector",
         "Unsupervised Isolation Forest",
         "Historical Disruption Timeline",
         "Automated Root-Cause Attribution"
     ],
-    "6. Explainability Centre": [
+    "🔍 6. Explainability Centre": [
         "Global SHAP Feature Importance",
         "Local Prediction Waterfall (SHAP)",
         "Permutation Feature Impact",
         "Model Interpretability Diagnostics"
     ],
-    "7. Scenario Simulator": [
+    "🌱 7. Scenario Simulator": [
         "Baseline vs Policy Divergence",
         "Sectoral Decarbonization Sliders",
         "Cumulative Avoided Carbon Wedge",
@@ -133,7 +133,7 @@ def render_sidebar():
 
         modules = list(MODULE_SUBITEMS.keys())
 
-        if "selected_module" not in st.session_state:
+        if "selected_module" not in st.session_state or st.session_state.selected_module not in modules:
             st.session_state.selected_module = modules[0]
 
         choice = st.radio(

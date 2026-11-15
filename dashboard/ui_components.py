@@ -206,36 +206,98 @@ def apply_theme():
             margin: 16px 4px 8px 4px;
         }}
 
-        /* Streamlit Radio Re-styling for Navigation Pills */
-        [data-testid="stSidebar"] div[role="radiogroup"] > label {{
-            background: transparent !important;
-            padding: 10px 14px !important;
-            border-radius: 12px !important;
-            margin-bottom: 5px !important;
-            border: 1px solid transparent !important;
-            color: {c["sidebar_text"]} !important;
-            font-size: 0.88rem !important;
-            font-weight: 500 !important;
+        /* Sidebar Default Text Color Fallback (Guarantees zero dark-on-dark invisible text) */
+        [data-testid="stSidebar"],
+        [data-testid="stSidebar"] div[data-testid="stMarkdownContainer"] p,
+        [data-testid="stSidebar"] span,
+        [data-testid="stSidebar"] label {{
+            color: #F8FAFC !important;
+        }}
+
+        /* Streamlit Radio Re-styling for Navigation Capsule Pills (Matching Reference Design) */
+        [data-testid="stSidebar"] [data-testid="stRadio"],
+        [data-testid="stSidebar"] div[role="radiogroup"] {{
+            gap: 6px !important;
+        }}
+
+        [data-testid="stSidebar"] [data-testid="stRadio"] label,
+        [data-testid="stSidebar"] div[role="radiogroup"] label {{
+            background: rgba(255, 255, 255, 0.06) !important;
+            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+            border-radius: 9999px !important;
+            padding: 9px 16px !important;
+            margin-bottom: 6px !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            cursor: pointer !important;
+            width: 100% !important;
             transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
         }}
 
-        [data-testid="stSidebar"] div[role="radiogroup"] > label:hover {{
-            background: {c["sidebar_surface"]} !important;
-            border-color: {c["sidebar_border"]} !important;
-            transform: translateX(2px);
+        [data-testid="stSidebar"] [data-testid="stRadio"] label:hover,
+        [data-testid="stSidebar"] div[role="radiogroup"] label:hover {{
+            background: rgba(255, 255, 255, 0.14) !important;
+            border-color: rgba(52, 211, 153, 0.5) !important;
+            transform: translateX(3px) !important;
         }}
 
-        [data-testid="stSidebar"] div[role="radiogroup"] > label[data-checked="true"],
-        [data-testid="stSidebar"] div[role="radiogroup"] > label:has(input:checked) {{
-            background: {c["sidebar_surface"]} !important;
-            border: 1px solid rgba(52, 211, 153, 0.45) !important;
+        /* High-contrast crisp white typography for ALL radio label children */
+        [data-testid="stSidebar"] [data-testid="stRadio"] label *,
+        [data-testid="stSidebar"] div[role="radiogroup"] label *,
+        [data-testid="stSidebar"] [data-testid="stRadio"] div[data-testid="stMarkdownContainer"] p,
+        [data-testid="stSidebar"] div[role="radiogroup"] div[data-testid="stMarkdownContainer"] p,
+        [data-testid="stSidebar"] [data-testid="stRadio"] span,
+        [data-testid="stSidebar"] div[role="radiogroup"] span {{
             color: #FFFFFF !important;
+            font-size: 0.88rem !important;
             font-weight: 600 !important;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+            letter-spacing: -0.01em !important;
         }}
 
-        [data-testid="stSidebar"] div[role="radiogroup"] input[type="radio"] {{
+        /* Active / Selected Radio Pill (Glowing Mint / Emerald Highlight) */
+        [data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked),
+        [data-testid="stSidebar"] [data-testid="stRadio"] label[data-checked="true"],
+        [data-testid="stSidebar"] div[role="radiogroup"] label:has(input:checked),
+        [data-testid="stSidebar"] div[role="radiogroup"] label[data-checked="true"] {{
+            background: rgba(16, 185, 129, 0.24) !important;
+            border: 1px solid #10B981 !important;
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+        }}
+
+        [data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) *,
+        [data-testid="stSidebar"] [data-testid="stRadio"] label[data-checked="true"] *,
+        [data-testid="stSidebar"] div[role="radiogroup"] label:has(input:checked) *,
+        [data-testid="stSidebar"] div[role="radiogroup"] label[data-checked="true"] *,
+        [data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) p,
+        [data-testid="stSidebar"] [data-testid="stRadio"] label[data-checked="true"] p {{
+            color: #34D399 !important;
+            font-weight: 700 !important;
+        }}
+
+        [data-testid="stSidebar"] [data-testid="stRadio"] input[type="radio"] {{
             accent-color: #10B981 !important;
+            width: 15px !important;
+            height: 15px !important;
+        }}
+
+        [data-testid="stSidebar"] .stButton > button {{
+            background: rgba(255, 255, 255, 0.08) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            color: #FFFFFF !important;
+            font-size: 0.78rem !important;
+            font-weight: 600 !important;
+            border-radius: 9999px !important;
+            padding: 4px 12px !important;
+            box-shadow: none !important;
+        }}
+
+        [data-testid="stSidebar"] .stButton > button:hover {{
+            background: rgba(16, 185, 129, 0.25) !important;
+            border-color: #10B981 !important;
+            color: #34D399 !important;
+            transform: none !important;
         }}
 
         /* Elevated Card Panels (As in Reference Image: Pure White, Rounded 20px, Subtle Shadow) */
