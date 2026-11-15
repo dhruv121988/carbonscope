@@ -1,0 +1,248 @@
+{
+  "audit_title": "CarbonScope 2.0 Official Data Quality & Integrity Audit",
+  "source_authority": "European Commission Joint Research Centre (EDGAR 2026)",
+  "audit_date": "2026-11-13 10:34:49 UTC",
+  "datasets": {
+    "master_panel": {
+      "dataset_name": "Master Emissions Panel",
+      "total_records": 11872,
+      "total_columns": 12,
+      "columns": [
+        "Country",
+        "Country_Raw",
+        "EDGAR_Code",
+        "Year",
+        "Emissions_MtCO2eq",
+        "Unit",
+        "Is_Aggregate",
+        "Fossil_CO2_Mt",
+        "Emissions_Per_Capita_tCO2eq",
+        "Emissions_Per_GDP_tCO2eq_per_kUSD",
+        "Non_CO2_GHG_MtCO2eq",
+        "Non_CO2_Share_Pct"
+      ],
+      "data_types": {
+        "Country": "object",
+        "Country_Raw": "object",
+        "EDGAR_Code": "object",
+        "Year": "int32",
+        "Emissions_MtCO2eq": "float64",
+        "Unit": "object",
+        "Is_Aggregate": "bool",
+        "Fossil_CO2_Mt": "float64",
+        "Emissions_Per_Capita_tCO2eq": "float64",
+        "Emissions_Per_GDP_tCO2eq_per_kUSD": "float64",
+        "Non_CO2_GHG_MtCO2eq": "float64",
+        "Non_CO2_Share_Pct": "float64"
+      },
+      "total_nulls": 4784,
+      "null_percentage": 3.36,
+      "null_by_column": {
+        "Country": 0,
+        "Country_Raw": 0,
+        "EDGAR_Code": 0,
+        "Year": 0,
+        "Emissions_MtCO2eq": 0,
+        "Unit": 0,
+        "Is_Aggregate": 0,
+        "Fossil_CO2_Mt": 0,
+        "Emissions_Per_Capita_tCO2eq": 112,
+        "Emissions_Per_GDP_tCO2eq_per_kUSD": 4672,
+        "Non_CO2_GHG_MtCO2eq": 0,
+        "Non_CO2_Share_Pct": 0
+      },
+      "duplicate_records": 0,
+      "numeric_summary": {
+        "Year": {
+          "count": 11872,
+          "min": 1970.0,
+          "max": 2025.0,
+          "mean": 1997.5,
+          "negative_count": 0
+        },
+        "Emissions_MtCO2eq": {
+          "count": 11872,
+          "min": 0.0035299095020693,
+          "max": 54149.174008064,
+          "mean": 371.3809,
+          "negative_count": 0
+        },
+        "Fossil_CO2_Mt": {
+          "count": 11872,
+          "min": 0.00078505995206344,
+          "max": 39961.817565971,
+          "mean": 270.1826,
+          "negative_count": 0
+        },
+        "Emissions_Per_Capita_tCO2eq": {
+          "count": 11760,
+          "min": 0.2314320647697,
+          "max": 256.85179453911,
+          "mean": 7.9759,
+          "negative_count": 0
+        },
+        "Emissions_Per_GDP_tCO2eq_per_kUSD": {
+          "count": 7200,
+          "min": 0.018553514089002,
+          "max": 12.947929005856,
+          "mean": 0.4792,
+          "negative_count": 0
+        },
+        "Non_CO2_GHG_MtCO2eq": {
+          "count": 11872,
+          "min": 0.0012865245803724999,
+          "max": 14187.356442092998,
+          "mean": 101.1983,
+          "negative_count": 0
+        },
+        "Non_CO2_Share_Pct": {
+          "count": 11872,
+          "min": 1.313491299315941,
+          "max": 99.3346229411519,
+          "mean": 45.7355,
+          "negative_count": 0
+        }
+      }
+    },
+    "sector_breakdown": {
+      "dataset_name": "GHG by Sector and Country",
+      "total_records": 271936,
+      "total_columns": 11,
+      "columns": [
+        "Country",
+        "Country_Raw",
+        "EDGAR_Code",
+        "Sector",
+        "Sector_Raw",
+        "Substance",
+        "Substance_Raw",
+        "Year",
+        "Emissions_MtCO2eq",
+        "Unit",
+        "Is_Aggregate"
+      ],
+      "data_types": {
+        "Country": "object",
+        "Country_Raw": "object",
+        "EDGAR_Code": "object",
+        "Sector": "object",
+        "Sector_Raw": "object",
+        "Substance": "object",
+        "Substance_Raw": "object",
+        "Year": "int32",
+        "Emissions_MtCO2eq": "float64",
+        "Unit": "object",
+        "Is_Aggregate": "bool"
+      },
+      "total_nulls": 0,
+      "null_percentage": 0.0,
+      "null_by_column": {
+        "Country": 0,
+        "Country_Raw": 0,
+        "EDGAR_Code": 0,
+        "Sector": 0,
+        "Sector_Raw": 0,
+        "Substance": 0,
+        "Substance_Raw": 0,
+        "Year": 0,
+        "Emissions_MtCO2eq": 0,
+        "Unit": 0,
+        "Is_Aggregate": 0
+      },
+      "duplicate_records": 0,
+      "numeric_summary": {
+        "Year": {
+          "count": 271936,
+          "min": 1970.0,
+          "max": 2025.0,
+          "mean": 1997.5,
+          "negative_count": 0
+        },
+        "Emissions_MtCO2eq": {
+          "count": 271936,
+          "min": 0.0,
+          "max": 15703.423421683,
+          "mean": 16.2135,
+          "negative_count": 0
+        }
+      }
+    }
+  },
+  "decadal_completeness": {
+    "1970-1979 (Decade 1)": {
+      "years": "1970-1979",
+      "total_observations": 2120,
+      "valid_observations": 2120,
+      "completeness_pct": 100.0
+    },
+    "1980-1989 (Decade 2)": {
+      "years": "1980-1989",
+      "total_observations": 2120,
+      "valid_observations": 2120,
+      "completeness_pct": 100.0
+    },
+    "1990-1999 (Decade 3)": {
+      "years": "1990-1999",
+      "total_observations": 2120,
+      "valid_observations": 2120,
+      "completeness_pct": 100.0
+    },
+    "2000-2009 (Decade 4)": {
+      "years": "2000-2009",
+      "total_observations": 2120,
+      "valid_observations": 2120,
+      "completeness_pct": 100.0
+    },
+    "2010-2019 (Decade 5)": {
+      "years": "2010-2019",
+      "total_observations": 2120,
+      "valid_observations": 2120,
+      "completeness_pct": 100.0
+    },
+    "2020-2025 (Decade 6)": {
+      "years": "2020-2025",
+      "total_observations": 1272,
+      "valid_observations": 1272,
+      "completeness_pct": 100.0
+    }
+  },
+  "cleaning_transformations": [
+    {
+      "step": "Drop Blank Rows",
+      "details": "Removed fully null separator rows",
+      "records_affected": 2
+    },
+    {
+      "step": "Melt Totals Panel",
+      "details": "Converted wide matrix (212 countries x 56 years) into long format",
+      "records_affected": 11872
+    },
+    {
+      "step": "Melt Sectoral Panel",
+      "details": "Processed 212 entities across 8 sectors",
+      "records_affected": 271936
+    },
+    {
+      "step": "Drop Blank Rows",
+      "details": "Removed fully null separator rows",
+      "records_affected": 2
+    },
+    {
+      "step": "Melt Totals Panel",
+      "details": "Converted wide matrix (212 countries x 56 years) into long format",
+      "records_affected": 11872
+    },
+    {
+      "step": "Assemble Master Panel",
+      "details": "Merged totals, fossil CO2, per-capita, and per-GDP indicators into unified 11,872 record panel",
+      "records_affected": 11872
+    }
+  ],
+  "integrity_verification": {
+    "zero_duplicates_verified": true,
+    "temporal_continuity_1970_2025": true,
+    "aggregate_separation_enforced": true,
+    "non_negative_gross_emissions": true,
+    "overall_health_score_pct": 99.88
+  }
+}

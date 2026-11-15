@@ -1,0 +1,72 @@
+{
+  "country": "India",
+  "train_cutoff_year": 2015,
+  "best_model": "Linear Regression",
+  "best_test_rmse": 202.24,
+  "models": {
+    "Linear Regression": {
+      "train_metrics": {
+        "MAE": 19.62,
+        "MSE": 718.96,
+        "RMSE": 26.81,
+        "R2": 0.9986,
+        "MAPE_pct": 1.19
+      },
+      "test_metrics": {
+        "MAE": 166.47,
+        "MSE": 40899.78,
+        "RMSE": 202.24,
+        "R2": 0.7691,
+        "MAPE_pct": 4.32
+      }
+    },
+    "Support Vector Regression": {
+      "train_metrics": {
+        "MAE": 156.25,
+        "MSE": 89335.63,
+        "RMSE": 298.89,
+        "R2": 0.8295,
+        "MAPE_pct": 8.82
+      },
+      "test_metrics": {
+        "MAE": 1966.62,
+        "MSE": 4116272.62,
+        "RMSE": 2028.86,
+        "R2": -22.2419,
+        "MAPE_pct": 50.22
+      }
+    },
+    "Random Forest": {
+      "train_metrics": {
+        "MAE": 15.07,
+        "MSE": 613.61,
+        "RMSE": 24.77,
+        "R2": 0.9988,
+        "MAPE_pct": 0.82
+      },
+      "test_metrics": {
+        "MAE": 782.3,
+        "MSE": 777278.54,
+        "RMSE": 881.63,
+        "R2": -3.3888,
+        "MAPE_pct": 19.41
+      }
+    },
+    "Gradient Boosting": {
+      "train_metrics": {
+        "MAE": 3.59,
+        "MSE": 19.29,
+        "RMSE": 4.39,
+        "R2": 1.0,
+        "MAPE_pct": 0.25
+      },
+      "test_metrics": {
+        "MAE": 689.86,
+        "MSE": 611990.92,
+        "RMSE": 782.3,
+        "R2": -2.4555,
+        "MAPE_pct": 17.08
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "datasets": {
+    "EDGAR_2026_GHG_booklet_2026.xlsx": {
+      "filename": "EDGAR_2026_GHG_booklet_2026.xlsx",
+      "filepath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\gw\\data\\raw\\EDGAR_2026_GHG_booklet_2026.xlsx",
+      "size_bytes": 4767596,
+      "size_mb": 4.55,
+      "sha256": "bb77a0da5735925b3a6a64be63dade9e71b57174d5ec6c7eff872274df00f88c",
+      "source": "European Commission, Joint Research Centre (JRC)",
+      "database": "EDGAR (Emissions Database for Global Atmospheric Research)",
+      "version": "EDGAR_2026_GHG",
+      "registered_at": "2026-11-13T04:35:30.170187Z",
+      "file_last_modified": "2026-11-11T15:51:47.528023",
+      "status": "Verified Genuine",
+      "provenance_note": "Official European Commission JRC 2026 Release"
+    },
+    "EDGAR_2026_GHG_booklet_2026_fossilCO2only.xlsx": {
+      "filename": "EDGAR_2026_GHG_booklet_2026_fossilCO2only.xlsx",
+      "filepath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\gw\\data\\raw\\EDGAR_2026_GHG_booklet_2026_fossilCO2only.xlsx",
+      "size_bytes": 1550592,
+      "size_mb": 1.48,
+      "sha256": "f01dd983b480ef0b1cc8b1bcb3ede39aa9aca9838572f120f3c186881844503d",
+      "source": "European Commission, Joint Research Centre (JRC)",
+      "database": "EDGAR (Emissions Database for Global Atmospheric Research)",
+      "version": "EDGAR_2026_GHG",
+      "registered_at": "2026-11-13T04:35:30.194187Z",
+      "file_last_modified": "2026-11-11T15:51:46.177047",
+      "status": "Verified Genuine",
+      "provenance_note": "Official European Commission JRC 2026 Release"
+    },
+    "GHG_emissions_of_all_world_countries_booklet_2026report.pdf": {
+      "filename": "GHG_emissions_of_all_world_countries_booklet_2026report.pdf",
+      "filepath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\gw\\data\\raw\\GHG_emissions_of_all_world_countries_booklet_2026report.pdf",
+      "size_bytes": 6465096,
+      "size_mb": 6.17,
+      "sha256": "4e5712706aed4b9384cd7ffb71c17299b2777644a1b5240539fc6e931418c667",
+      "source": "European Commission, Joint Research Centre (JRC)",
+      "database": "EDGAR (Emissions Database for Global Atmospheric Research)",
+      "version": "EDGAR_2026_GHG",
+      "registered_at": "2026-11-13T04:35:30.252576Z",
+      "file_last_modified": "2026-11-11T16:04:59.440278",
+      "status": "Verified Genuine",
+      "provenance_note": "Official European Commission JRC 2026 Release"
+    }
+  },
+  "last_updated": "2026-11-13T04:35:30.252576Z"
+}
